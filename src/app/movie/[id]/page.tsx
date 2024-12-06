@@ -6,21 +6,18 @@ import {
 import { MovieDetailed } from "@/modules/movies/types/MovieDetailed";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import MovieSection from "./MovieSection";
 import MovieRecommendations from "@/components/MovieRecommendations";
 import Link from "next/link";
+import MoviePageSection from "./MoviePageSection";
 
 interface MoviePageProps {
-	params: {
-		id: string;
-	};
+	params: Promise<{ id: string }>;
 }
 
 export async function generateMetadata({
 	params,
 }: MoviePageProps): Promise<Metadata> {
-	const { id } = await Promise.resolve(params);
-
+	const { id } = await params; // Ahora params es una promesa.
 	try {
 		const movie = await fetchMovieDetails(id);
 		if (!movie) {
@@ -33,9 +30,8 @@ export async function generateMetadata({
 }
 
 export default async function MoviePage({ params }: MoviePageProps) {
-	const { id } = await Promise.resolve(params);
-
-	const movie: MovieDetailed | null = await fetchMovieDetails(id);
+	const { id } = await params; // Aquí también usamos await.
+	const movie = await fetchMovieDetails(id);
 
 	if (!movie) {
 		notFound();
@@ -45,7 +41,7 @@ export default async function MoviePage({ params }: MoviePageProps) {
 
 	return (
 		<div className="bg-[#454545] min-h-screen relative">
-			<MovieSection movie={movie} />
+			<MoviePageSection movie={movie} />
 			<div className="mt-5">
 				<MovieRecommendations recommendations={recommendations.results} />
 			</div>

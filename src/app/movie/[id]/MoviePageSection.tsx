@@ -2,11 +2,11 @@ import CircularProgress from "@/components/CircularProgress";
 import { MovieDetailed } from "@/modules/movies/types/MovieDetailed";
 import { FaHeart } from "react-icons/fa";
 
-interface MovieSectionProps {
+interface MoviePageSectionProps {
 	movie: MovieDetailed;
 }
 
-const MovieSection: React.FC<MovieSectionProps> = ({ movie }) => {
+const MoviePageSection: React.FC<MoviePageSectionProps> = ({ movie }) => {
 	const ratingPercentage = Math.round(movie.vote_average * 10);
 
 	return (
@@ -85,4 +85,4 @@ const MovieSection: React.FC<MovieSectionProps> = ({ movie }) => {
 	);
 };
 
-export default MovieSection;
+export default MoviePageSection;
