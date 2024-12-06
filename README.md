@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QuickBet Movies - Guía de Configuración 🚀
 
-## Getting Started
+Este documento proporciona una guía paso a paso para clonar, configurar y ejecutar el proyecto **QuickBet Movies**, un sitio web de películas creado con Next.js. 
 
-First, run the development server:
+---
+
+## Tabla de Contenidos
+1. [Requisitos Previos](#requisitos-previos)
+2. [Clonación del Proyecto](#clonación-del-proyecto)
+3. [Instalación de Dependencias](#instalación-de-dependencias)
+4. [Ejecutar el Proyecto en Desarrollo](#ejecutar-el-proyecto-en-desarrollo)
+5. [Compilar el Proyecto para Producción](#compilar-el-proyecto-para-producción)
+6. [Errores Comunes y Soluciones](#errores-comunes-y-soluciones)
+
+---
+
+## Requisitos Previos
+
+Asegúrate de tener instaladas las siguientes herramientas en tu máquina:
+- **Node.js** (versión 16.8.0 o superior)  
+  [Descargar Node.js](https://nodejs.org/)
+- **npm** (instalado con Node.js) o **yarn**
+- **Git**  
+  [Descargar Git](https://git-scm.com/)
+
+---
+
+## Clonación del Proyecto
+
+1. Abre una terminal o línea de comandos.
+2. Clona este repositorio usando Git:
+   ```bash
+   git clone https://github.com/SantiagoRS26/quickbet-movies.git
+   ```
+3. Cambia al directorio del proyecto:
+   ```bash
+   cd quickbet-movies
+   ```
+
+---
+
+## Instalación de Dependencias
+
+Una vez en el directorio del proyecto, instala las dependencias necesarias:
+
+```bash
+npm install
+```
+
+O, si prefieres usar **yarn**:
+
+```bash
+yarn install
+```
+
+---
+
+## Ejecutar el Proyecto en Desarrollo
+
+Inicia el servidor de desarrollo con el siguiente comando:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O, si usas **yarn**:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Esto ejecutará el servidor de desarrollo y estará disponible en `http://localhost:3000`.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Compilar el Proyecto para Producción
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para preparar el proyecto para producción, utiliza el siguiente comando:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+O, si usas **yarn**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+yarn build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este comando generará una versión optimizada del proyecto en la carpeta `.next`.
+
+Para previsualizar la compilación de producción, ejecuta:
+
+```bash
+npm run start
+```
+
+O, si usas **yarn**:
+
+```bash
+yarn start
+```
+
+---
+
+## Errores Comunes y Soluciones
+
+### Error: "Module not found"
+Asegúrate de que todas las dependencias están instaladas correctamente ejecutando:
+```bash
+npm install
+```
+
+### Error: "Cannot find module 'next'"
+Verifica que instalaste correctamente las dependencias en el directorio del proyecto.
+
+---
+
+¡Y eso es todo! Si tienes preguntas o problemas, no dudes en abrir un [issue en el repositorio](https://github.com/SantiagoRS26/quickbet-movies/issues). 🎉
