@@ -65,7 +65,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onGenreChange, onSearchChange }) => {
 			<aside
 				className="bg-[#262626] text-white p-4 h-full fixed top-0 left-0 z-[11] w-60 flex flex-col gap-6 transition-transform -translate-x-full
         peer-checked:translate-x-0
-        lg:translate-x-0 lg:relative lg:block">
+        lg:translate-x-0 lg:relative lg:block lg:h-auto">
 				<div className="flex justify-end lg:hidden">
 					<label
 						htmlFor="sidebarToggle"
